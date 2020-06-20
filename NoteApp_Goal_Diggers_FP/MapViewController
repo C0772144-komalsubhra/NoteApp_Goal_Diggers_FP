@@ -13,3 +13,8 @@ import UIKit
 import MapKit
 import CoreLocation
 import CoreData
+
+
+class MapViewController: UIViewController, CLLocationManagerDelegate {
+    @IBOutlet weak var mapView: MKMapView!
+    
