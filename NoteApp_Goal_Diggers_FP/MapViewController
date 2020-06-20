@@ -30,4 +30,12 @@ override func viewDidLoad() {
                locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
                locationManager.requestWhenInUseAuthorization()
                locationManager.startUpdatingLocation()
-               
+                mapView.showsUserLocation = true
+               print("user latitude = \(latitude)")
+               print("user longitude = \(longitude)")
+        let noteLocation = CLLocation(latitude: latitude!, longitude: longitude!)
+                 super.viewDidLoad(); self.navigationController!.setNavigationBarHidden(false, animated: true)
+               self.title = "Note Location"
+               let regionRadius: CLLocationDistance = 350
+               let coordinateRegion = MKCoordinateRegion(center: noteLocation.coordinate, latitudinalMeters: regionRadius * 2.0, longitudinalMeters: regionRadius * 2.0)
+               self.mapView.setRegion(coordinateRegion, animated: true)               
