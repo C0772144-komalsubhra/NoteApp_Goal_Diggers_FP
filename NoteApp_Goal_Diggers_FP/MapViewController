@@ -45,3 +45,4 @@ override func viewDidLoad() {
                annotation.title = "Note Location"
                annotation.subtitle = "\(latitude),\(longitude)"
                self.mapView.addAnnotation(annotation)
+}
