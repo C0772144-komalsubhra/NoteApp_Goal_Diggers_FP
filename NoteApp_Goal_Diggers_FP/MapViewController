@@ -21,3 +21,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     var latitude: CLLocationDegrees?
     var longitude: CLLocationDegrees?
     
+override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+        
+               locationManager.delegate = self
+               locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+               locationManager.requestWhenInUseAuthorization()
+               locationManager.startUpdatingLocation()
+               
