@@ -1,4 +1,15 @@
+//
+//  MapViewController.swift
+//  NoteApp
+//
+//  Created by user175427 on 6/20/20.
+//  Copyright © 2020 user175427. All rights reserved.
+//
+
+
+
+
 import UIKit
 import MapKit
-import  CoreLocation
+import CoreLocation
 import CoreData
