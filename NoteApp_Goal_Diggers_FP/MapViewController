@@ -17,4 +17,7 @@ import CoreData
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var mapView: MKMapView!
+     var locationManager = CLLocationManager()
+    var latitude: CLLocationDegrees?
+    var longitude: CLLocationDegrees?
     
