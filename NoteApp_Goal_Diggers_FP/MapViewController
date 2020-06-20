@@ -38,4 +38,10 @@ override func viewDidLoad() {
                self.title = "Note Location"
                let regionRadius: CLLocationDistance = 350
                let coordinateRegion = MKCoordinateRegion(center: noteLocation.coordinate, latitudinalMeters: regionRadius * 2.0, longitudinalMeters: regionRadius * 2.0)
-               self.mapView.setRegion(coordinateRegion, animated: true)               
+               self.mapView.setRegion(coordinateRegion, animated: true)        
+               // Drop a pin at user's Current Location
+               let annotation: MKPointAnnotation = MKPointAnnotation()
+               annotation.coordinate = CLLocationCoordinate2DMake(noteLocation.coordinate.latitude, noteLocation.coordinate.longitude);
+               annotation.title = "Note Location"
+               annotation.subtitle = "\(latitude),\(longitude)"
+               self.mapView.addAnnotation(annotation)
